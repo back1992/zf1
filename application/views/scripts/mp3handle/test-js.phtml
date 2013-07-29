@@ -1,0 +1,53 @@
+<br /><br />
+<title>Introduction to the HTML5 audio tag javascript manipulation</title>
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="js/jquery.audiotag.js" type="text/javascript"></script>
+<div id="view-content">
+
+	<p>View script for controller <b>Mp3handle</b> and script/action name <b>testJs</b></p>
+
+</div>
+<div class="filename">Filename: <span></span></div>
+<div class="duration">Duration: <span></span></div>
+<div>
+	<a href="#" class="play buttons">play</a>
+	<a href="#" class="pause buttons">pause</a>
+	<a href="#" class="playatTime buttons">play at 35 secondes</a>
+	<a href="#" class="volumestop buttons">Volume to 0</a>
+	<a href="#" class="volumeMax buttons">Volume open</a>
+</div>	
+
+<script type="text/javascript">
+$(document).ready(function() {
+	var audioElement = document.createElement('audio');
+	audioElement.setAttribute('src', '/audio/Mogwai2009-04-29_acidjack_t16.ogg');
+	audioElement.load()
+	audioElement.addEventListener("load", function() { 
+		audioElement.play(); 
+		$(".duration span").html(audioElement.duration);
+		$(".filename span").html(audioElement.src);
+	}, true);
+
+
+
+	
+	$('.play').click(function() {
+		audioElement.play();
+		
+	});
+	$('.pause').click(function() {
+		audioElement.pause();
+	});
+	$('.volumeMax').click(function() {
+		audioElement.volume=1;
+	});
+	$('.volumestop').click(function() {
+		audioElement.volume=0;
+	});
+	$('.playatTime').click(function() {
+		audioElement.currentTime= 35;
+		audioElement.play();
+	});			
+});
+
+</script>

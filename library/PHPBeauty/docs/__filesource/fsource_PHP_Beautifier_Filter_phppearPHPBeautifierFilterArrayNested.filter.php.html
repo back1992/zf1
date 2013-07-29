@@ -1,0 +1,103 @@
+<?php
+    xmlversion = "1.0"encoding = "iso-8859-1"
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>File Source for ArrayNested.filter.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+						<h1>Source for file ArrayNested.filter.php</h1>
+<p>Documentation is available at <a href="../PHP_Beautifier/Filter/_php_pear_PHP_Beautifier_Filter_ArrayNested_filter_php.html">ArrayNested.filter.php</a></p>
+<div class="src-code">
+<pre><ol><li><a name="a1"></a><span class="src-php">&lt;?php</span></li>
+<li><a name="a2"></a>    <span class="src-comm">/* vim: set expandtab tabstop=4 shiftwidth=4: */</span></li>
+<li><a name="a3"></a><span class="src-comm">// +----------------------------------------------------------------------+</span></li>
+<li><a name="a4"></a>    <span class="src-comm">// | PHP version 5                                                        |</span></li>
+<li><a name="a5"></a>    <span class="src-comm">// +----------------------------------------------------------------------+</span></li>
+<li><a name="a6"></a>    <span class="src-comm">// | Copyright (c) 1997-2004 The PHP Group                                |</span></li>
+<li><a name="a7"></a>    <span class="src-comm">// +----------------------------------------------------------------------+</span></li>
+<li><a name="a8"></a>    <span class="src-comm">// | This source file is subject to version 3.0 of the PHP license,       |</span></li>
+<li><a name="a9"></a>    <span class="src-comm">// | that is bundled with this package in the file LICENSE, and is        |</span></li>
+<li><a name="a10"></a>    <span class="src-comm">// | available through the world-wide-web at the following url:           |</span></li>
+<li><a name="a11"></a>    <span class="src-comm">// | http://www.php.net/license/3_0.txt.                                  |</span></li>
+<li><a name="a12"></a>    <span class="src-comm">// | If you did not receive a copy of the PHP license and are unable to   |</span></li>
+<li><a name="a13"></a>    <span class="src-comm">// | obtain it through the world-wide-web, please send a note to          |</span></li>
+<li><a name="a14"></a>    <span class="src-comm">// | license@php.net so we can mail you a copy immediately.               |</span></li>
+<li><a name="a15"></a>    <span class="src-comm">// +----------------------------------------------------------------------+</span></li>
+<li><a name="a16"></a>    <span class="src-comm">// | Authors: Claudio Bustos &lt;cdx@users.sourceforge.net&gt;                  |</span></li>
+<li><a name="a17"></a>    <span class="src-comm">// |          Jens Bierkandt &lt;schtorch@users.sourceforge.net&gt;             |</span></li>
+<li><a name="a18"></a>    <span class="src-comm">// +----------------------------------------------------------------------+</span></li>
+<li><a name="a19"></a>    <span class="src-comm">//</span></li>
+<li><a name="a20"></a>    <span class="src-comm">// $Id:</span></li>
+<li><a name="a20"></a>    </li>
+<li><a name="a21"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a22"></a><span class="src-doc">    * Definition of class PHP_Beautifier_Filter_ArrayNested</span></li>
+<li><a name="a23"></a><span class="src-doc">    * </span><span class="src-doc-coretag">@package</span><span class="src-doc"> PHP_Beautifier</span></li>
+<li><a name="a24"></a><span class="src-doc">    * </span><span class="src-doc-coretag">@subpackage</span><span class="src-doc"> Filter</span></li>
+<li><a name="a25"></a><span class="src-doc">    */</span></li>
+<li><a name="a26"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a27"></a><span class="src-doc">    * Indent the array structures</span></li>
+<li><a name="a28"></a><span class="src-doc">    * Ex.</span></li>
+<li><a name="a29"></a><span class="src-doc">    * &lt;CODE&gt;</span></li>
+<li><a name="a30"></a><span class="src-doc">    *    $aMyArray = array(</span></li>
+<li><a name="a31"></a><span class="src-doc">    *        array(</span></li>
+<li><a name="a32"></a><span class="src-doc">    *            array(</span></li>
+<li><a name="a33"></a><span class="src-doc">    *                array(</span></li>
+<li><a name="a34"></a><span class="src-doc">    *                    'el'=&gt;1,</span></li>
+<li><a name="a35"></a><span class="src-doc">    *                    'el'=&gt;2</span></li>
+<li><a name="a36"></a><span class="src-doc">    *                )</span></li>
+<li><a name="a37"></a><span class="src-doc">    *            )</span></li>
+<li><a name="a38"></a><span class="src-doc">    *        )</span></li>
+<li><a name="a39"></a><span class="src-doc">    *    );</span></li>
+<li><a name="a40"></a><span class="src-doc">    * &lt;/CODE&gt;</span></li>
+<li><a name="a41"></a><span class="src-doc">    * </span><span class="src-doc-coretag">@package</span><span class="src-doc"> PHP_Beautifier</span></li>
+<li><a name="a42"></a><span class="src-doc">    * </span><span class="src-doc-coretag">@subpackage</span><span class="src-doc"> Filter</span></li>
+<li><a name="a43"></a><span class="src-doc">    */</span></li>
+<li><a name="a44"></a>    <span class="src-key">class </span><a href="../PHP_Beautifier/Filter/PHP_Beautifier_Filter_ArrayNested.html">PHP_Beautifier_Filter_ArrayNested</a> <span class="src-key">extends </span><a href="../PHP_Beautifier/Filter/PHP_Beautifier_Filter.html">PHP_Beautifier_Filter</a> <span class="src-sym">{</span></li>
+<li><a name="a45"></a>        <span class="src-key">function </span><a href="../PHP_Beautifier/Filter/PHP_Beautifier_Filter_ArrayNested.html#methodt_parenthesis_open">t_parenthesis_open</a><span class="src-sym">(</span><span class="src-var">$sTag</span><span class="src-sym">) </span></li>
+<li><a name="a46"></a>        <span class="src-sym">{</span></li>
+<li><a name="a47"></a>            <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../PHP_Beautifier/Filter/PHP_Beautifier_Filter.html#var$oBeaut">oBeaut</a><span class="src-sym">-&gt;</span><span class="src-id">add</span><span class="src-sym">(</span><span class="src-var">$sTag</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a48"></a>            <span class="src-key">if </span><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../PHP_Beautifier/Filter/PHP_Beautifier_Filter.html#var$oBeaut">oBeaut</a><span class="src-sym">-&gt;</span><span class="src-id">getControlParenthesis</span><span class="src-sym">(</span><span class="src-sym">)</span>==<span class="src-id">T_ARRAY</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a49"></a>                <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../PHP_Beautifier/Filter/PHP_Beautifier_Filter.html#var$oBeaut">oBeaut</a><span class="src-sym">-&gt;</span><span class="src-id">addNewLine</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a50"></a>                <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../PHP_Beautifier/Filter/PHP_Beautifier_Filter.html#var$oBeaut">oBeaut</a><span class="src-sym">-&gt;</span><span class="src-id">iIndent</span>++<span class="src-sym">;</span></li>
+<li><a name="a51"></a>                <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../PHP_Beautifier/Filter/PHP_Beautifier_Filter.html#var$oBeaut">oBeaut</a><span class="src-sym">-&gt;</span><span class="src-id">addIndent</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a52"></a>            <span class="src-sym">}</span></li>
+<li><a name="a53"></a>        <span class="src-sym">}</span></li>
+<li><a name="a54"></a>        <span class="src-key">function </span><a href="../PHP_Beautifier/Filter/PHP_Beautifier_Filter_ArrayNested.html#methodt_parenthesis_close">t_parenthesis_close</a><span class="src-sym">(</span><span class="src-var">$sTag</span><span class="src-sym">) </span></li>
+<li><a name="a55"></a>        <span class="src-sym">{</span></li>
+<li><a name="a56"></a>            <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../PHP_Beautifier/Filter/PHP_Beautifier_Filter.html#var$oBeaut">oBeaut</a><span class="src-sym">-&gt;</span><span class="src-id">removeWhitespace</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a57"></a>            <span class="src-key">if </span><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../PHP_Beautifier/Filter/PHP_Beautifier_Filter.html#var$oBeaut">oBeaut</a><span class="src-sym">-&gt;</span><span class="src-id">getControlParenthesis</span><span class="src-sym">(</span><span class="src-sym">)</span>==<span class="src-id">T_ARRAY</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a58"></a>                <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../PHP_Beautifier/Filter/PHP_Beautifier_Filter.html#var$oBeaut">oBeaut</a><span class="src-sym">-&gt;</span><span class="src-id">iIndent</span>--<span class="src-sym">;</span></li>
+<li><a name="a59"></a>                <span class="src-key">if </span><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../PHP_Beautifier/Filter/PHP_Beautifier_Filter.html#var$oBeaut">oBeaut</a><span class="src-sym">-&gt;</span><span class="src-id">getPreviousTokenContent</span><span class="src-sym">(</span><span class="src-sym">)</span>!=<span class="src-str">'('</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a60"></a>                    <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../PHP_Beautifier/Filter/PHP_Beautifier_Filter.html#var$oBeaut">oBeaut</a><span class="src-sym">-&gt;</span><span class="src-id">addNewLine</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a61"></a>                    <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../PHP_Beautifier/Filter/PHP_Beautifier_Filter.html#var$oBeaut">oBeaut</a><span class="src-sym">-&gt;</span><span class="src-id">addIndent</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a62"></a>                <span class="src-sym">}</span></li>
+<li><a name="a63"></a>                <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../PHP_Beautifier/Filter/PHP_Beautifier_Filter.html#var$oBeaut">oBeaut</a><span class="src-sym">-&gt;</span><span class="src-id">add</span><span class="src-sym">(</span><span class="src-var">$sTag</span>.<span class="src-str">' '</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a64"></a>            <span class="src-sym">} </span><span class="src-key">else </span><span class="src-sym">{</span></li>
+<li><a name="a65"></a>                <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../PHP_Beautifier/Filter/PHP_Beautifier_Filter.html#var$oBeaut">oBeaut</a><span class="src-sym">-&gt;</span><span class="src-id">add</span><span class="src-sym">(</span><span class="src-var">$sTag</span>.<span class="src-str">' '</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a66"></a>            <span class="src-sym">}</span></li>
+<li><a name="a67"></a>        <span class="src-sym">}</span></li>
+<li><a name="a68"></a>        <span class="src-key">function </span><a href="../PHP_Beautifier/Filter/PHP_Beautifier_Filter_ArrayNested.html#methodt_comma">t_comma</a><span class="src-sym">(</span><span class="src-var">$sTag</span><span class="src-sym">) </span></li>
+<li><a name="a69"></a>        <span class="src-sym">{</span></li>
+<li><a name="a70"></a>            <span class="src-key">if </span><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../PHP_Beautifier/Filter/PHP_Beautifier_Filter.html#var$oBeaut">oBeaut</a><span class="src-sym">-&gt;</span><span class="src-id">getControlParenthesis</span><span class="src-sym">(</span><span class="src-sym">)</span>!=<span class="src-id">T_ARRAY</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a71"></a>                <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../PHP_Beautifier/Filter/PHP_Beautifier_Filter.html#var$oBeaut">oBeaut</a><span class="src-sym">-&gt;</span><span class="src-id">add</span><span class="src-sym">(</span><span class="src-var">$sTag</span>.<span class="src-str">' '</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a72"></a>            <span class="src-sym">} </span><span class="src-key">else </span><span class="src-sym">{</span></li>
+<li><a name="a73"></a>                <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../PHP_Beautifier/Filter/PHP_Beautifier_Filter.html#var$oBeaut">oBeaut</a><span class="src-sym">-&gt;</span><span class="src-id">add</span><span class="src-sym">(</span><span class="src-var">$sTag</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a74"></a>                <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../PHP_Beautifier/Filter/PHP_Beautifier_Filter.html#var$oBeaut">oBeaut</a><span class="src-sym">-&gt;</span><span class="src-id">addNewLine</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a75"></a>                <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../PHP_Beautifier/Filter/PHP_Beautifier_Filter.html#var$oBeaut">oBeaut</a><span class="src-sym">-&gt;</span><span class="src-id">addIndent</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a76"></a>            <span class="src-sym">}</span></li>
+<li><a name="a77"></a>        <span class="src-sym">}</span></li>
+<li><a name="a78"></a>&nbsp;</li>
+<li><a name="a79"></a>    <span class="src-sym">}</span></li>
+<li><a name="a80"></a><span class="src-php">?&gt;</span></li>
+</ol></pre>
+</div>
+	<p class="notes" id="credit">
+		Documentation generated on Sat, 22 May 2004 03:54:50 -0400 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.0RC3</a>
+	</p>
+	</body>
+</html>

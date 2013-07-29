@@ -1,0 +1,28 @@
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#nav li").hover(
+			function(){ $("ul", this).fadeIn("fast"); }, 
+			function() { } 
+		);
+	if (document.all) {
+			$("#nav li").hoverClass ("sfHover");
+		}
+	});
+	
+	$.fn.hoverClass = function(c) {
+		return this.each(function(){
+			$(this).hover( 
+				function() { $(this).addClass(c);  },
+				function() { $(this).removeClass(c); }
+			);
+		});
+	};	  
+</script>
+
+<div id="header">
+	<div id="logo">
+		<img src="/skins/default/images/lin.jpg">
+	</div>
+	<div id="nav"><?php echo $this->navigation()->menu(); ?></div>
+</div>
+

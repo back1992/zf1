@@ -1,0 +1,37 @@
+/*wrap*/
+#wrap { width: 980px; margin: 0 auto;}
+
+/*header*/
+#header {height: 80px; }
+#logo {float: left;}
+#logo 
+{
+height:60px;
+width:80px;
+}
+#logo img
+{
+max-width:100%; 
+max-height:100%;
+margin:auto;
+display:block;
+}
+#nav {height:30px; float: right; margin-top: 60px;}
+
+/*main*/
+#main { padding: 10px 0; min-height: 400px; background: #FFF;}
+
+/*sidebar*/
+#sidebar { height: 400px; width: 160px; float: left; padding: 10px; border: 1px #CCC solid; background: #EEE;}
+
+/*content*/
+#content { min-height: 400px; background: #FFF;  padding: 10px; margin-top: 10px;margin-left: 10px; border: 1px #CCC solid;}
+#contentCommunity {border: 1px #CCC solid; padding: 10px;}
+#contentAdmin { min-height: 400px; border: 1px #CCC solid; padding: 20px 10px;}
+
+/*footer*/
+#footer { height: 50px; background: #000; color: #FFF; line-height: 50px; padding: 0 10px; clear: both;}
+
+/*admin*/
+#adminHeader { height: 20px; line-height: 20px; background: #769dc0; font-size: 28px; color: #FFF; padding: 10px;}
+#adminNav { height: 30px; line-height: 30px; background: #CCC;}

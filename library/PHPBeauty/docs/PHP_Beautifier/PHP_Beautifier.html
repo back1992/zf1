@@ -1,0 +1,2213 @@
+<?php
+    xmlversion = "1.0"encoding = "iso-8859-1"
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class PHP_Beautifier</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> PHP_Beautifier</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">PHP_Beautifier</p>
+<p class="description"><p>Class to beautify php code  How to use: <ul><li>Create a instance of the object</li><li>Define the input and output files</li><li>Optional: Set one or more Filter. They are processed in LIFO order (last in, first out)</li><li>Process the file</li><li>Get it, save it or show it.</li></ul>  <pre><ol><code><pre><li> <span class="src-var">$oToken </span>= <span class="src-key">new </span><span class="src-id"><a href="../PHP_Beautifier/PHP_Beautifier.html">PHP_Beautifier</a></span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">; </span><span class="src-comm">// create a instance</span></li>
+<li> <span class="src-var">$oToken</span><span class="src-sym">-&gt;</span><a href="../PHP_Beautifier/PHP_Beautifier.html#methodaddFilter">addFilter</a><span class="src-sym">(</span><span class="src-str">'ArraySimple'</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li> <span class="src-var">$oToken</span><span class="src-sym">-&gt;</span><a href="../PHP_Beautifier/PHP_Beautifier.html#methodaddFilter">addFilter</a><span class="src-sym">(</span><span class="src-str">'ListClassFunction'</span><span class="src-sym">)</span><span class="src-sym">; </span><span class="src-comm">// add one or more filters</span></li>
+<li> <span class="src-var">$oToken</span><span class="src-sym">-&gt;</span><a href="../PHP_Beautifier/PHP_Beautifier.html#methodsetInputFile">setInputFile</a><span class="src-sym">(</span>__FILE__<span class="src-sym">)</span><span class="src-sym">; </span><span class="src-comm">// nice... process the same file</span></li>
+<li> <span class="src-var">$oToken</span><span class="src-sym">-&gt;</span><a href="../PHP_Beautifier/PHP_Beautifier.html#methodprocess">process</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">; </span><span class="src-comm">// required</span></li>
+<li> <span class="src-var">$oToken</span><span class="src-sym">-&gt;</span><a href="../PHP_Beautifier/PHP_Beautifier.html#methodshow">show</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+</pre></code></ol></pre></p></p>
+	<ul class="tags">
+				<li><span class="field">todo:</span> create a web interface.</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_php_pear_PHP_Beautifier_php.html">/php/pear/PHP/Beautifier.php</a> (line <span class="field"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a59">59</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$aAssocs" title="details" class="var-name">$aAssocs</a>
+				</div>
+								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$aModes" title="details" class="var-name">$aModes</a>
+				</div>
+								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$aOut" title="details" class="var-name">$aOut</a>
+				</div>
+								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$aSettings" title="details" class="var-name">$aSettings</a>
+				</div>
+								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$aTokenFunctions" title="details" class="var-name">$aTokenFunctions</a>
+				</div>
+								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$aTokens" title="details" class="var-name">$aTokens</a>
+				</div>
+								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$currentWhitespace" title="details" class="var-name">$currentWhitespace</a>
+				</div>
+								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">int</span>
+					<a href="#$iArray" title="details" class="var-name">$iArray</a>
+				</div>
+								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">int</span>
+					<a href="#$iCount" title="details" class="var-name">$iCount</a>
+				</div>
+								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">int</span>
+					<a href="#$iIndent" title="details" class="var-name">$iIndent</a>
+				</div>
+								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">int</span>
+					<a href="#$iIndentNumber" title="details" class="var-name">$iIndentNumber</a>
+				</div>
+								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">int</span>
+					<a href="#$iParenthesis" title="details" class="var-name">$iParenthesis</a>
+				</div>
+								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">int</span>
+					<a href="#$iVerbose" title="details" class="var-name">$iVerbose</a>
+				</div>
+								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$sIndentChar" title="details" class="var-name">$sIndentChar</a>
+				</div>
+								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$sInputFile" title="details" class="var-name">$sInputFile</a>
+				</div>
+								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$sNewLine" title="details" class="var-name">$sNewLine</a>
+				</div>
+								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$sOutputFile" title="details" class="var-name">$sOutputFile</a>
+				</div>
+							</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+								
+				<div class="method-definition">
+					<img src="../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">PHP_Beautifier</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#add" title="details" class="method-name">add</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$token</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">bool</span>
+										<a href="#addFilter" title="details" class="method-name">addFilter</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$sFilter</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$aSettings</span> = <span class="var-default">array()</span>])
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#addFilterDirectory" title="details" class="method-name">addFilterDirectory</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$sDir</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#addIndent" title="details" class="method-name">addIndent</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#addNewLine" title="details" class="method-name">addNewLine</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#get" title="details" class="method-name">get</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#getControlParenthesis" title="details" class="method-name">getControlParenthesis</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$iRet</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#getControlSeq" title="details" class="method-name">getControlSeq</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$iRet</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getFilesByPattern" title="details" class="method-name">getFilesByPattern</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$sDir</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$sFilePattern</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$bRecursive</span> = <span class="var-default">false</span>])
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#getFilterDescription" title="details" class="method-name">getFilterDescription</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$sFilter</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getFilterDirectories" title="details" class="method-name">getFilterDirectories</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getFilterList" title="details" class="method-name">getFilterList</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getFilterListTotal" title="details" class="method-name">getFilterListTotal</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">bool</span>
+										<a href="#getMode" title="details" class="method-name">getMode</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$sKey</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">int</span>
+										<a href="#getNextTokenConstant" title="details" class="method-name">getNextTokenConstant</a>
+											([<span class="var-type">int</span>&nbsp;<span class="var-name">$iPrev</span> = <span class="var-default">1</span>])
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">int</span>
+										<a href="#getNextTokenContent" title="details" class="method-name">getNextTokenContent</a>
+											([<span class="var-type">int</span>&nbsp;<span class="var-name">$iNext</span> = <span class="var-default">1</span>])
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">int</span>
+										<a href="#getPreviousTokenConstant" title="details" class="method-name">getPreviousTokenConstant</a>
+											([<span class="var-type">int</span>&nbsp;<span class="var-name">$iPrev</span> = <span class="var-default">1</span>])
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getPreviousTokenContent" title="details" class="method-name">getPreviousTokenContent</a>
+											([<span class="var-type">int</span>&nbsp;<span class="var-name">$iPrev</span> = <span class="var-default">1</span>])
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#getSetting" title="details" class="method-name">getSetting</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$sKey</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getToken" title="details" class="method-name">&amp;getToken</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$iIndex</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#getTokenAssoc" title="details" class="method-name">getTokenAssoc</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$iIndex</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#getTokenAssocText" title="details" class="method-name">getTokenAssocText</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$iIndex</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#getTokenFunction" title="details" class="method-name">getTokenFunction</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$sTokenType</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">bool</span>
+										<a href="#isNextTokenConstant" title="details" class="method-name">isNextTokenConstant</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$mValue</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$iPrev</span> = <span class="var-default">1</span>])
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">bool</span>
+										<a href="#isNextTokenContent" title="details" class="method-name">isNextTokenContent</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$mValue</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$iPrev</span> = <span class="var-default">1</span>])
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">bool</span>
+										<a href="#isPreviousTokenConstant" title="details" class="method-name">isPreviousTokenConstant</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$mValue</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$iPrev</span> = <span class="var-default">1</span>])
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">bool</span>
+										<a href="#isPreviousTokenContent" title="details" class="method-name">isPreviousTokenContent</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$mValue</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$iPrev</span> = <span class="var-default">1</span>])
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#normalizeDir" title="details" class="method-name">normalizeDir</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$sDir</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#pop" title="details" class="method-name">pop</a>
+											([<span class="var-type">int</span>&nbsp;<span class="var-name">$iReps</span> = <span class="var-default">1</span>])
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">bool</span>
+										<a href="#process" title="details" class="method-name">process</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#removeWhitespace" title="details" class="method-name">removeWhitespace</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">bool</span>
+										<a href="#replaceTokenAssoc" title="details" class="method-name">replaceTokenAssoc</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$iIndex</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$sText</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#save" title="details" class="method-name">save</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$sFile</span> = <span class="var-default">null</span>])
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setBeautify" title="details" class="method-name">setBeautify</a>
+											(<span class="var-type">bool</span>&nbsp;<span class="var-name">$sFlag</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setIndentChar" title="details" class="method-name">setIndentChar</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$sChar</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setIndentNumber" title="details" class="method-name">setIndentNumber</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$iIndentNumber</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setInputFile" title="details" class="method-name">setInputFile</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$sFile</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setMode" title="details" class="method-name">setMode</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$sKey</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setNewLine" title="details" class="method-name">setNewLine</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$sNewLine</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setOutputFile" title="details" class="method-name">setOutputFile</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$sFile</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setString" title="details" class="method-name">setString</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$sText</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#show" title="details" class="method-name">show</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#unsetMode" title="details" class="method-name">unsetMode</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$sKey</span>)
+									</div>
+							</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$aAssocs" id="$aAssocs"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$aAssocs</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a148">148</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Association $aTokens=&gt;$aOut</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$aModes" id="$aModes"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$aModes</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a83">83</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Contains the assigment of modes</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+				<li><span class="field">see:</span> <a href="../PHP_Beautifier/PHP_Beautifier.html#methodgetMode">PHP_Beautifier::getMode()</a></li>
+				<li><span class="field">see:</span> <a href="../PHP_Beautifier/PHP_Beautifier.html#methodunsetMode">PHP_Beautifier::unsetMode()</a></li>
+				<li><span class="field">see:</span> <a href="../PHP_Beautifier/PHP_Beautifier.html#methodsetMode">PHP_Beautifier::setMode()</a></li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$aOut" id="$aOut"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$aOut</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a75">75</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Stores the output</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$aSettings" id="$aSettings"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$aSettings</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a88">88</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Settings for the class</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$aTokenFunctions" id="$aTokenFunctions"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$aTokenFunctions</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a70">70</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Tokens codes assigned to method on Filter</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$aTokens" id="$aTokens"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$aTokens</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a65">65</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Tokens created by the tokenizer</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$currentWhitespace" id="$currentWhitespace"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$currentWhitespace</span>
+			 = <span class="var-default"> ''</span>			(line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a143">143</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Save the last whitespace used. Use only for Filter! (i miss friends of C++ :( )</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$iArray" id="$iArray"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">int</span>
+			<span class="var-name">$iArray</span>
+			 = <span class="var-default"> 0</span>			(line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a108">108</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Level of array nesting</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$iCount" id="$iCount"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">int</span>
+			<span class="var-name">$iCount</span>
+			 = <span class="var-default"> 0</span>			(line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a93">93</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Index of current token</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$iIndent" id="$iIndent"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">int</span>
+			<span class="var-name">$iIndent</span>
+			 = <span class="var-default"> 0</span>			(line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a98">98</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Level of indent</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$iIndentNumber" id="$iIndentNumber"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">int</span>
+			<span class="var-name">$iIndentNumber</span>
+			 = <span class="var-default"> 4</span>			(line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a103">103</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Chars for indentation</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$iParenthesis" id="$iParenthesis"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">int</span>
+			<span class="var-name">$iParenthesis</span>
+			 = <span class="var-default"> 0</span>			(line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a113">113</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Level of parenthesis nesting</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$iVerbose" id="$iVerbose"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">int</span>
+			<span class="var-name">$iVerbose</span>
+			 = <span class="var-default"> false</span>			(line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a118">118</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Level of verbosity (debug)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$sIndentChar" id="$sIndentChar"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$sIndentChar</span>
+			 = <span class="var-default"> ' '</span>			(line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a138">138</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Type of whitespace to use for indent</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$sInputFile" id="$sInputFile"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$sInputFile</span>
+			 = <span class="var-default"> ''</span>			(line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a123">123</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Name of input file</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$sNewLine" id="$sNewLine"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$sNewLine</span>
+			 = <span class="var-default"> &quot;\n&quot;</span>			(line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a133">133</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Type of newline</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$sOutputFile" id="$sOutputFile"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$sOutputFile</span>
+			 = <span class="var-default"> ''</span>			(line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a128">128</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Name of output file</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+														<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a174">174</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constructor.</p>
+<p class="description"><p>Assing values to $aControlStructures,$aControlStructuresEnd,  <a href="../PHP_Beautifier/PHP_Beautifier.html#var$aTokenFunctions">$aTokenFunctions</a></p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">PHP_Beautifier</span>
+		<span class="method-name">
+			__construct
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodadd" id="add"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">add</span> (line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a877">877</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Add a string to the output</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			add
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$token</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$token</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodaddFilter" id="addFilter"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">addFilter</span> (line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a322">322</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Add a Filter to the Beautifier  The first argument is the name of the file of the Filter.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> true if Filter is loaded, false if the same filter was loaded previously</li>
+				<li><span class="field">access:</span> public</li>
+				<li><span class="field">throw:</span> Exception</li>
+				<li><span class="field">tutorial:</span> <a href="../PHP_Beautifier/Filter/tutorial_Filter.pkg.html">Filter architecture</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			addFilter
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$sFilter</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$aSettings</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$sFilter</span><span class="var-description">: name of the Filter</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$aSettings</span><span class="var-description">: settings for the Filter</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodaddFilterDirectory" id="addFilterDirectory"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">addFilterDirectory</span> (line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a286">286</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Add a filter directory</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+				<li><span class="field">throw:</span> Exception</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			addFilterDirectory
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$sDir</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$sDir</span><span class="var-description">: path to directory</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodaddIndent" id="addIndent"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">addIndent</span> (line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a903">903</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Add Indent to the output</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+				<li><span class="field">see:</span> <a href="../PHP_Beautifier/PHP_Beautifier.html#var$iIndent">PHP_Beautifier::$iIndent</a></li>
+				<li><span class="field">see:</span> <a href="../PHP_Beautifier/PHP_Beautifier.html#var$iIndentNumber">PHP_Beautifier::$iIndentNumber</a></li>
+				<li><span class="field">see:</span> <a href="../PHP_Beautifier/PHP_Beautifier.html#var$sIndentChar">PHP_Beautifier::$sIndentChar</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			addIndent
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodaddNewLine" id="addNewLine"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">addNewLine</span> (line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a894">894</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Add a new line to the output</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			addNewLine
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodget" id="get"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">get</span> (line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a816">816</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the beutified code</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			get
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodgetControlParenthesis" id="getControlParenthesis"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getControlParenthesis</span> (line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a841">841</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the token constant for the current Parenthesis</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> token constant or false</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			getControlParenthesis
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$iRet</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$iRet</span><span class="var-description">: current token -'x'</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodgetControlSeq" id="getControlSeq"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getControlSeq</span> (line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a832">832</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the token constant for the current control construct</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getControlSeq
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$iRet</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$iRet</span><span class="var-description">: current token -'x' @ return mixed token constant or false</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodgetFilesByPattern" id="getFilesByPattern"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getFilesByPattern</span> (line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a424">424</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Search, inside a dir, for a file pattern, using regular expresion  Example:</p>
+<p class="description"><p><pre><ol><code><pre><li><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../PHP_Beautifier/PHP_Beautifier.html#methodgetFilesByPattern">getFilesByPattern</a><span class="src-sym">(</span><span class="src-str">'.'</span><span class="src-sym">,</span><span class="src-str">'*.php'</span><span class="src-sym">,</span><span class="src-id">true</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+</pre></code></ol></pre>  Search recursively for all the files with php extensions  in the current dir</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> path to files</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getFilesByPattern
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$sDir</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$sFilePattern</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$bRecursive</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$sDir</span><span class="var-description">: path to a dir</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$sFilePattern</span><span class="var-description">: file pattern</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$bRecursive</span><span class="var-description">: recursive?</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodgetFilterDescription" id="getFilterDescription"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getFilterDescription</span> (line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a344">344</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return the Filter Description</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> string or false</li>
+				<li><span class="field">access:</span> public</li>
+				<li><span class="field">see:</span> PHP_Beautifier_Filter::__toString();</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			getFilterDescription
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$sFilter</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$sFilter</span><span class="var-description">: name of the filter</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodgetFilterDirectories" id="getFilterDirectories"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getFilterDirectories</span> (line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a298">298</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return an array with all the Filter Dirs</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> List of Filter Directories</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getFilterDirectories
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodgetFilterList" id="getFilterList"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getFilterList</span> (line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a382">382</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the names of the loaded filters</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> list of Filters</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getFilterList
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodgetFilterListTotal" id="getFilterListTotal"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getFilterListTotal</span> (line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a392">392</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the list of all available Filters in all the include Dirs</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> list of Filters</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getFilterListTotal
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodgetMode" id="getMode"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getMode</span> (line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a867">867</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the state of a mode</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			getMode
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$sKey</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$sKey</span><span class="var-description">: name of the mode</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodgetNextTokenConstant" id="getNextTokenConstant"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getNextTokenConstant</span> (line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a1019">1019</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the 'x' significant (non whiteline) next token constant</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			getNextTokenConstant
+		</span>
+					([<span class="var-type">int</span>&nbsp;<span class="var-name">$iPrev</span> = <span class="var-default">1</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$iPrev</span><span class="var-description">: current+x token</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodgetNextTokenContent" id="getNextTokenContent"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getNextTokenContent</span> (line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a1028">1028</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the 'x' significant (non whiteline) next token text</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			getNextTokenContent
+		</span>
+					([<span class="var-type">int</span>&nbsp;<span class="var-name">$iNext</span> = <span class="var-default">1</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$iNext</span><span class="var-description">: current+x token</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodgetPreviousTokenConstant" id="getPreviousTokenConstant"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getPreviousTokenConstant</span> (line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a1000">1000</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the 'x' significant (non whiteline) previous token constant</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			getPreviousTokenConstant
+		</span>
+					([<span class="var-type">int</span>&nbsp;<span class="var-name">$iPrev</span> = <span class="var-default">1</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$iPrev</span><span class="var-description">: current-x token</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodgetPreviousTokenContent" id="getPreviousTokenContent"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getPreviousTokenContent</span> (line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a1009">1009</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the 'x' significant (non whiteline) previous token text</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getPreviousTokenContent
+		</span>
+					([<span class="var-type">int</span>&nbsp;<span class="var-name">$iPrev</span> = <span class="var-default">1</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$iPrev</span><span class="var-description">: current-x token</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodgetSetting" id="getSetting"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getSetting</span> (line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a824">824</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the value of a settings</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Value of the settings or false</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			getSetting
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$sKey</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$sKey</span><span class="var-description">: Name of the setting</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodgetToken" id="getToken"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getToken</span> (line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a1050">1050</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get a token by number</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			&amp;getToken
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$iIndex</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$iIndex</span><span class="var-description">: number of the token</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodgetTokenAssoc" id="getTokenAssoc"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getTokenAssoc</span> (line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a608">608</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the reference to $aOut, based on the number of the token</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> false array or false if token doesn't exists</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			getTokenAssoc
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$iIndex</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$iIndex</span><span class="var-description">: token number</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodgetTokenAssocText" id="getTokenAssocText"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getTokenAssocText</span> (line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a616">616</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the output for specified token</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> string or false if token doesn't exists</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			getTokenAssocText
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$iIndex</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$iIndex</span><span class="var-description">: token number</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodgetTokenFunction" id="getTokenFunction"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getTokenFunction</span> (line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a643">643</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return the function for a token constant or string.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> name of function or false</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			getTokenFunction
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$sTokenType</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$sTokenType</span><span class="var-description">: token constant or string</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodisNextTokenConstant" id="isNextTokenConstant"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">isNextTokenConstant</span> (line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a976">976</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return true if any of the constant defined is param 1 is the next 'x' content</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			isNextTokenConstant
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$mValue</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$iPrev</span> = <span class="var-default">1</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$mValue</span><span class="var-description">: int (constant) or array</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodisNextTokenContent" id="isNextTokenContent"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">isNextTokenContent</span> (line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a988">988</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return true if any of the content defined is param 1 is the next 'x' content</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			isNextTokenContent
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$mValue</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$iPrev</span> = <span class="var-default">1</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$mValue</span><span class="var-description">: string (content) or array</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodisPreviousTokenConstant" id="isPreviousTokenConstant"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">isPreviousTokenConstant</span> (line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a952">952</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return true if any of the constant defined is param 1 is the previous 'x' constant</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			isPreviousTokenConstant
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$mValue</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$iPrev</span> = <span class="var-default">1</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$mValue</span><span class="var-description">: int (constant) or array</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodisPreviousTokenContent" id="isPreviousTokenContent"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">isPreviousTokenContent</span> (line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a964">964</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return true if any of the content defined is param 1 is the previous 'x' content</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			isPreviousTokenContent
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$mValue</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$iPrev</span> = <span class="var-default">1</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$mValue</span><span class="var-description">: string (content) or array</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodnormalizeDir" id="normalizeDir"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">normalizeDir</span> (line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a306">306</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Normalize reference to directories</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> normalized path to directory</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			normalizeDir
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$sDir</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$sDir</span><span class="var-description">: path to directory</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodpop" id="pop"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">pop</span> (line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a885">885</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Delete the last added outputs</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+				<li><span class="field">deprecated:</span> </li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			pop
+		</span>
+					([<span class="var-type">int</span>&nbsp;<span class="var-name">$iReps</span> = <span class="var-default">1</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$iReps</span><span class="var-description">: number of outputs to drop</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodprocess" id="process"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">process</span> (line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a550">550</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Process the string or file to beautify</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> true on success</li>
+				<li><span class="field">access:</span> public</li>
+				<li><span class="field">throw:</span> Exception</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			process
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodremoveWhitespace" id="removeWhitespace"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">removeWhitespace</span> (line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a1035">1035</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Remove all whitespace from the previous tag</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			removeWhitespace
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodreplaceTokenAssoc" id="replaceTokenAssoc"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">replaceTokenAssoc</span> (line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a628">628</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Replace the output for specified token</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			replaceTokenAssoc
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$iIndex</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$sText</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$iIndex</span><span class="var-description">: token number</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$sText</span><span class="var-description">: replace text</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodsave" id="save"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">save</span> (line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a498">498</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Save the beautified code to output file</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+				<li><span class="field">throw:</span> Exception</li>
+				<li><span class="field">see:</span> setOutputFile();</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			save
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$sFile</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$sFile</span><span class="var-description">: path to file. If null, <a href="../PHP_Beautifier/PHP_Beautifier.html#var$sOutputFile">$sOutputFile</a> if exists, throw exception otherwise</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodsetBeautify" id="setBeautify"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setBeautify</span> (line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a803">803</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the Beautifier on or off</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setBeautify
+		</span>
+					(<span class="var-type">bool</span>&nbsp;<span class="var-name">$sFlag</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$sFlag</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodsetIndentChar" id="setIndentChar"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setIndentChar</span> (line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a448">448</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Character used for indentation</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setIndentChar
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$sChar</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$sChar</span><span class="var-description">: usually ' ' or &quot;\t&quot;</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodsetIndentNumber" id="setIndentNumber"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setIndentNumber</span> (line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a455">455</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Number of characters for indentation</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setIndentNumber
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$iIndentNumber</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$iIndentNumber</span><span class="var-description">: ussualy 4 for space or 1 for tabs</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodsetInputFile" id="setInputFile"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setInputFile</span> (line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a470">470</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the file for beautify</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+				<li><span class="field">throw:</span> Exception</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setInputFile
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$sFile</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$sFile</span><span class="var-description">: path to file</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodsetMode" id="setMode"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setMode</span> (line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a852">852</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set a mode to true</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setMode
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$sKey</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$sKey</span><span class="var-description">: name of the mode</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodsetNewLine" id="setNewLine"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setNewLine</span> (line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a462">462</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Character used as a new line</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setNewLine
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$sNewLine</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$sNewLine</span><span class="var-description">: ussualy &quot;\n&quot;, &quot;\r\n&quot; or &quot;\r&quot;</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodsetOutputFile" id="setOutputFile"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setOutputFile</span> (line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a489">489</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the output file for beautify</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setOutputFile
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$sFile</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$sFile</span><span class="var-description">: path to file</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodsetString" id="setString"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setString</span> (line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a520">520</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set a string for beautify</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setString
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$sText</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$sText</span><span class="var-description">: Must be preceded by open tag</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodshow" id="show"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">show</span> (line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a809">809</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Show the beautified code</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			show
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodunsetMode" id="unsetMode"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">unsetMode</span> (line <span class="line-number"><a href="..//__filesource/fsource_PHP_Beautifier__phppearPHPBeautifier.php.html#a859">859</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set a mode to false</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			unsetMode
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$sKey</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$sKey</span><span class="var-description">: name of the mode</span>			</li>
+				</ul>
+		
+		
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sat, 22 May 2004 03:54:56 -0400 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.0RC3</a>
+	</p>
+	</div></body>
+</html>

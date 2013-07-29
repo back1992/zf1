@@ -1,0 +1,21 @@
+/*wrap*/
+#wrap { width: 980px; margin: 0 auto;}
+
+/*header*/
+#header { height: 80px; }
+
+/*nav*/
+#nav {height: 30px; line-height: 30px; padding: 0; }
+#nav span { margin-right:  10px; font-size:  14px; font-weight:  700;}
+
+/*main*/
+#main { padding: 10px 0; min-height: 400px; background: #FFF;}
+
+/*sidebar*/
+#sidebar { height: 400px; width: 160px; float: left; padding: 10px; border: 1px #CCC solid; background: #EEE;}
+
+/*content*/
+#content { min-height: 400px; background: #FFF;  padding: 10px; margin-left: 190px; border: 1px #CCC solid;}
+
+/*footer*/
+#footer { height: 50px; background: #000; color: #FFF; line-height: 50px; padding: 0 10px; clear: both;}

@@ -1,0 +1,17 @@
+/* html */
+
+body {#FFF; font-size: 12px; margin: 0 0 0 0 ; padding: 0;}
+p {text-align:justify; line-height: 1.8em; }
+h2 { font-size: 24px;}
+h3 { font-size: 18px;}
+ul {margin: 0; padding: 0;}
+
+/*content*/
+
+#content span { margin-right:  10px;}
+#content hr { border: 1px #999 dotted;}
+
+/*列表*/
+
+ul.listNews {list-style-position: inside; padding: 5px; border-bottom: 1px #CCC dotted;}
+ul.listNews li span {float: right; } 

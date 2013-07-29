@@ -1,0 +1,29 @@
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="/skins/default/css/layout.css" rel="stylesheet"
+              type="text/css" />
+        <link href="/skins/default/css/style.css" rel="stylesheet"
+              type="text/css" />
+              <?php echo $this->headTitle(); ?>
+        <script type="text/javascript" src="/js/jquery.js"></script>
+    </head>
+
+    <body>
+        <div id="wrap">
+            <?php
+            echo $this->layout()->userPanel;
+            echo $this->partial('header.phtml');
+            ?>
+            <div id="main">
+
+
+                <div id="breadcrumb"><?php echo $this->navigation()->breadcrumbs()->setLinkLast(false)->setMinDepth(1)->render(); ?></div>
+                <div id="content"><?php echo $this->layout()->content ?></div>
+            </div>
+            <?php echo $this->partial('footer.phtml'); ?>
+        </div>
+
+    </body>
+</html>

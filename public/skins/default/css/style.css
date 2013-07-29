@@ -1,0 +1,142 @@
+/**
+ +------------------------------------------------------------------------------
+ * html元素
+ +------------------------------------------------------------------------------
+ */
+
+body {#FFF; font-size: 22px; margin: 0 0 0 0 ; padding: 0;}
+p {text-align:justify; line-height: 1.8em; }
+h2 { font-size: 24px;}
+h3 { font-size: 18px; border-bottom: 2px #CCC solid;}
+ul {margin: 0; padding: 0;}
+
+/**
+ +------------------------------------------------------------------------------
+ * 内容
+ +------------------------------------------------------------------------------
+ */
+#content hr { border: 1px #999 dotted;}
+
+/**
+ +------------------------------------------------------------------------------
+ * ul列表
+ +------------------------------------------------------------------------------
+ */
+ul.listNews {list-style-position: inside; padding: 5px; border-bottom: 1px #CCC dotted; line-height: 25px;}
+ul.listNews li span {float: right; }
+
+ul.listCatetory{list-style: none; line-height: 25px;}
+ul.listCatetory li { font-size: 14px; padding: 5px;}
+
+/**
+ +------------------------------------------------------------------------------
+ * 顶部导航
+ +------------------------------------------------------------------------------
+ */
+#nav li:hover a, #nav li.sfHover a {  background: #fdfd8f;  color: #000; }
+#nav li:hover ul a, #nav li.sfHover ul a {  background: #fdfd8f;  color: #666; font-size: 12px;}
+#nav li:hover ul a:hover, #nav li.sfHover ul a:hover {  background: #fff001;  color: #000;  }
+#nav li.active a {display: block; text-decoration: none; color: #333; background: #ffff01;}
+
+.navigation, .navigation ul { list-style: none; margin: 0;  padding: 0; }
+.navigation { z-index: 1000;  position: relative;}
+.navigation li {  border: 1px solid #CCC; height: 30px; border-bottom: none;  float: left;  margin-left: 8px;  padding: 0;  
+                  position: relative;}
+.navigation li a:hover {}
+.navigation li a, .navigation li a:link, .navigation li a:visited { font-size: 14px; font-weight: bold;  
+                background: #F5F5F5;  color: #444;  line-height: 30px;   display: block;  padding: 0 15px; text-transform: lowercase;  
+                text-decoration: none;}
+.navigation li a:hover { background: #ccc;  color: #000; }
+
+.navigation ul {  background: #FFF;  border-bottom: 2px solid #f1d830;  list-style: none;  margin: 0;  
+                width: 172px;  position: absolute;  top: -999em;  left: -1px;}
+.navigation li:hover ul,.navigation li.sfHover ul { top: 30px;}
+.navigation ul li {  border: 0;  float: none; margin-left: 0 !important;  margin-left: 0px;}
+.navigation ul a { border: 1px solid #f1d830; height: 36px; line-height: 36px;  border-bottom: 0; 
+                padding-right: 20px;  width: 140px;  white-space: nowrap;}
+.navigation ul a:hover { background: #ccc;  color: #000;}
+
+/* 表单和数据表格 */
+dt { width: 80px; float:left;}
+dt,dd {min-height: 30px;}
+
+dl.listCatetory { height: 23px; line-height: 23px; padding: 0 10px; background: #EEE;}
+dl.listCatetory dt {float: left; width: 500px;}
+dl.listCatetory dd { float: right;}
+
+.profiler {width: 960px; margin: 10px auto; border: 1px #333 solid; -moz-border-radius:5px; padding: 10px; background: #EEE;}
+.profiler dl {clear: both; width: 100%;  border-bottom: 1px #666 dotted; padding: 5px 0;}
+.profiler dt { width: 200px; float: left; color: red; height: auto;}
+.profiler dd {width: 740px; color: blue; margin-left: 220px; height: auto;}
+
+/**
+ +------------------------------------------------------------------------------
+ * 表格
+ +------------------------------------------------------------------------------
+ */
+table { border-collapse:collapse; width: 100%}
+table, th, td { padding:5px; height: 30px;}
+td {vertical-align:top;}
+
+table.sheet, table.forum{ width: 100% !important; width: 98%; border: 1px solid #CCC; }
+table.sheet { margin: 10px auto;}
+table.sheet thead tr{ background:#EEE; font-weight: bold; color: #333;}
+table.sheet th{ background:#DDD; font-weight:bold; font-size:12px; text-align:center;}
+table.sheet td,th{ border: 1px #CCC solid;}
+table.sheet span { float: right; color: #EEE:}
+
+/*论坛表格*/
+table.forum {background: #F8F8F8;}
+table.forum thead {background: #e38a34; height: 40px; border: 1px #CCC solid;}
+table.forum tr.title {background: #E5E5E5; border: 1px #CCC solid;}
+table.forum thead th{text-align: center; color: #FFF; }
+table.forum td {border: 1px #CCC solid;}
+table.forum thead td {border: 1px #CCC solid; border-top: 15px #666 solid; border-bottom: 1px #CCC solid; margin-bottom: 10px;}
+table.forum img {border: 1px #CCC solid; padding: 2px;}
+table.forum img.logo {width: 32px; margin-right: 5px; float: left; border: 1px #CCC solid; padding: 2px;}
+table.forum img.title {  width: 96px; margin: 0; border: 1px #999 solid;}
+table.forum span {float: right; }
+
+/**
+ +------------------------------------------------------------------------------
+ * 用户界面
+ +------------------------------------------------------------------------------
+ */
+#userLeft { width: 300px; float: left; padding-right: 10px; margin-right: 10px; border-right: 1px #CCC solid;}
+#userAccount { background:#DDD;}
+#userAvatar { width: 96px; height: 96px; padding: 5px; border: 1px #CCC solid; margin: 0 10px 0 0; float: left; }
+#userAvatar img { width: 96px}
+#userInfo { padding-top: 10px;}
+#userForumTopic h3 { border-bottom: 1px #CCC solid;}
+#userProfile { clear: both; padding: 10px 5px;}
+#userRight { margin-left: 320px;}
+#userRight h2 { background: #c14710; color: #FFF; height: 30px; line-height: 30px; padding: 0 5px !important; padding: 7px 0 0 5px; }
+#userRight h3 {background: #E3E3E3; padding: 5px; margin: 10px 0; }
+
+/*用户面板*/
+#userPanel {margin-top: 5px; height: 20px; line-height: 20px; background: #EEE; text-align: right; }
+#userPanel a { margin-left: 10px;}
+
+/**
+ +------------------------------------------------------------------------------
+ * 菜单
+ +------------------------------------------------------------------------------
+ */
+.menuBox {border: 1px #CCC solid; padding: 10px; background: #EEE; margin-right: 10px; }
+
+/**
+ +------------------------------------------------------------------------------
+ * 后台管理
+ +------------------------------------------------------------------------------
+ */
+#adminHeader a {color: #FFF; text-decoration: none;}
+#adminNav a {color: #58758f; text-decoration: none; font-size: 14px; margin: 0 10px;}
+#adminNav a:hover { color: #ff3300}
+
+/**
+ +------------------------------------------------------------------------------
+ * 警示框和消息框
+ +------------------------------------------------------------------------------
+ */
+span.available {border: 1px #84b361solid; padding: 5px; background: #c6eaac;}
+span.taken {border: 1px #e79e9e solid; padding: 5px; background: #eaacac}
